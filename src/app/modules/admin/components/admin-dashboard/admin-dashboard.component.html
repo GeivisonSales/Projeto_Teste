@@ -1,0 +1,206 @@
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Project Test (Admin)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="./home">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class=" btn-primary nav-item text-white" role="button">
+                    <button class="btn nav-link text-white bg-primary" (click)="logout()">logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Add Category Modal -->
+<div class="modal fade" id="addcategory" tabindex="-1" aria-labelledby="addcategoryLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addcategoryLabel">Add Category</h5>
+        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+            <form class="p-4" method="POST" action="http://192.168.0.110/Sistema%20teste%20para%20(Traux)/projeto/api/actions/?method=post&table=categories">
+              <div class="mb-3">
+                <label for="cat_name" class="form-label">Category Name</label>
+                <input type="text" class="form-control" name="name" id="name">
+              </div>
+              <div class="mb-3">
+                <label for="cat_img" class="form-label">Category Image Link</label>
+                <input type="text" class="form-control" name="img" id="img">
+                <input type="hidden" name="id" id="id" value="0">
+              </div>
+              <button type="submit" class="btn btn-primary">Add to Database</button>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Product Modal -->
+<div class="modal fade" id="addproduct" tabindex="-1" aria-labelledby="addproduct" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addproductLabel">Add Product</h5>
+        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+            <form class="p-4" method="POST" action="http://192.168.0.110/Sistema%20teste%20para%20(Traux)/projeto/api/actions/?method=post&table=products">
+              <div class="mb-3">
+                <label for="prod_id" class="form-label">Product Category Id</label>
+                <input type="text" name="id" class="form-control" id="prod_id">
+              </div>
+              <div class="mb-3">
+                <label for="prod_name" class="form-label">Product Name</label>
+                <input type="text" name="name" class="form-control" id="prod_name">
+              </div>
+              <div class="mb-3">
+                <label for="prod_img" class="form-label">Product Image Link</label>
+                <input type="text" name="img" class="form-control" id="prod_img">
+              </div>
+              <button type="submit" class="btn btn-primary">Add to Database</button>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div class="container pt-5 pb-5 p-5 mb-5 mt-5">
+    <h2 class="mb-2 text-center">Hello Admin, Welcome again!</h2>
+    <p class="mb-4 text-center">Add and modify data.</p>
+    <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-between">
+            
+            <div class="list-group col-md-3">
+                <a class="list-group-item list-group-item-action text-light active">
+                 - Home
+                </a>
+                <a class="list-group-item list-group-item-action">Options</a>
+                <a class="list-group-item list-group-item-action">Lorem Ipsum</a>
+              </div>
+            
+            
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Category Register</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addcategory">Add</button>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Product Register</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addproduct">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-area footer--light">
+    <div class="footer-big">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <div class="footer-widget">
+              <div class="widget-about">
+                <h2 class="mb-3">Test Project</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="footer-widget">
+              <div class="footer-menu footer-menu--1">
+                <h4 class="footer-widget-title">Popular Category</h4>
+                <ul>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="footer-widget">
+              <div class="footer-menu">
+                <h4 class="footer-widget-title">Our Company</h4>
+                <ul>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <div class="footer-widget">
+              <div class="footer-menu no-padding">
+                <h4 class="footer-widget-title">Help Support</h4>
+                <ul>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                  <li>
+                    <a href="#">Lorem Ipsum</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright-text">
+              <p>© 2021
+                All rights reserved. Created by
+                <a href="https://nikyushosting.com" target="_blank">Geivison Sales</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
