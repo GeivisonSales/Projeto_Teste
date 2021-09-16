@@ -1,7 +1,7 @@
 # Projeto
 
 ## Sobre
-Projeto teste feito em Angular, Node, PHP, Html, Css, Bootstrap e MySql.
+Projeto teste feito em Angular, Node, JS, TS, PHP, Html, Css, Bootstrap e MySql.
 
 ## Tipo
 Front-End e Back-end básico
